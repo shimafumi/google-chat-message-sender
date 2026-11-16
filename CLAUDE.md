@@ -18,7 +18,7 @@ clasp push    # ローカルの src/ を Apps Script に反映
 clasp pull    # Apps Script 側の変更を src/ に取り込む
 ```
 
-`.clasprc.json`（clasp の認証情報）は gitignore 済み。読まない・コミットしないこと。
+`.clasp.json`（scriptId を含む）と `.clasprc.json`（clasp の認証情報）は gitignore 済みで、コミットしないこと。新しい環境では `.clasp.json.example` をコピーして `.clasp.json` を作り、scriptId を設定する。
 
 ## コード構成（src/Code.js）
 
