@@ -58,7 +58,7 @@ function sendTextToThread(webhookUrl, threadName, text) {
   };
 
   const options = {
-    'myamethod': 'POST',
+    'method': 'post',
     'contentType': 'application/json',
     'payload': JSON.stringify(payload)
   };
@@ -85,8 +85,8 @@ function buildThreadName(url) {
   }
 
   const temp = url.replace("https://chat.google.com/room/", "").split("/");
-  spaceId = temp[0];
-  threadId = temp[1];
+  const spaceId = temp[0];
+  const threadId = temp[1];
   return "spaces/" + spaceId + "/threads/" + threadId;
 }
 
@@ -108,7 +108,7 @@ function buildSpaceName(url) {
   }
 
   const temp = url.replace("https://chat.google.com/room/", "").split("/");
-  spaceId = temp[0];
+  const spaceId = temp[0];
   return "spaces/" + spaceId;
 }
 
